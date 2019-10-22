@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jmerkbzrk</title>
+    <link rel="stylesheet" href="../dist/css/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="title">
+            <h1>Jmerkbzrk.com</h1>
+            <p>The Speaker Of Truths Has No Friends</p>
+        </div>
+        <div class="maindiv">
+            <img name="slide" width="700px" height="500px">
+        </div>
+        <div class="contains">
+            <audio src="" controls id="audioPlayer">
+                Sorry, your browser doesn't support html5!
+            </audio>
+            <div class="dropdown">
+                <button onclick="show_hide()" class="button">Tracklist</button>
+                <ul style="display: none;" id="playlist">
+                    <li class="current-song"><a href="../dist/1. J-Merk - Biometricka (Prod.DjSadhu).mp3">Biometricka</a></li>
+                    <li><a href="../dist/2. J-Merk - Psilocybine (Prod.DjSadhu).mp3">Psilocybine</a></li>
+                    <li><a href="../dist/3. J-Merk - The Coalition (Prod.DjSadhu).mp3">The Coalition</a></li>
+                    <li><a href="../dist/4. J-Merk - Your B!tch Ft. Leaf & Bravo (Prod.DjSadhu).mp3">Your B!tch</a></li>
+                    <li><a href="../dist/5. J-Merk - Time Doesn't Exist (Prod.DjSadhu).mp3">Time Doesn't Exist</a></li>
+                    <li><a href="../dist/6. J-Merk - Focus (Prod. DjSadhu).mp3">Focus</a></li>
+                    <li><a href="../dist/7. J-Merk - Welcome To The Future (Prod. DjSadhu).mp3">Welcome To The Future</a></li>
+                </ul>
+                </li>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+        audioPlayer();
+        function audioPlayer() {
+            var currentSong = 0;
+            $("#audioPlayer")[0].src = $("#playlist li a")[0];
+            $("#audioPlayer")[0].play();
+            $("#playlist li a").click(function (e) {
+                e.preventDefault();
+                $("#audioPlayer")[0].src = this;
+                $("#audioPlayer")[0].play();
+                $("#playlist li").removeClass("current-song");
+                currentSong = $(this).parent().index();
+                $(this).parent().addClass("current-song");
+            });
+
+            $("#audioPlayer")[0].addEventListener("ended", function () {
+                currentSong++;
+                if (currentSong == $("#playlist li a").length)
+                    currentSong = 0;
+                $("#playlist li").removeClass("current-song");
+                $("#playlist li:eq(" + currentSong + ")").addClass("current-song");
+                $("#audioPlayer")[0].src = $("#playlist li a")[currentSong].href;
+                $("#audioPlayer")[0].play();
+            });
+        }
+
+        function show_hide() {
+            var click = document.getElementById("playlist");
+            if (click.style.display === "none") {
+                click.style.display = "block";
+            }
+            else {
+                click.style.display = "none";
+            }
+        }
+
+        var i = 0;
+        var images = [];
+        var time = 6000;
+
+        images[0] = '../dist/img/cover-1.jpg';
+        images[1] = '../dist/img/IMG_4716.jpg';
+        images[2] = '../dist/img/IMG_4724.jpg';
+        images[3] = '../dist/img/IMG_4714.jpg';
+        images[4] = '../dist/img/IMG_4725.jpg';
+        images[5] = '../dist/img/IMG_4711.jpg';
+        images[6] = '../dist/img/IMG_4723.jpg';
+        images[7] = '../dist/img/IMG_4726.jpg';
+        images[8] = '../dist/img/IMG_4722.jpg';
+        images[9] = '../dist/img/IMG_4713.jpg';
+        images[10] = '../dist/img/IMG_4715.jpg';
+
+        function changeImg() {
+            document.slide.src = images[i];
+
+            if (i < images.length - 1) {
+                i++;
+            } else {
+                i = 0;
+            }
+
+            setTimeout("changeImg()", time);
+
+        }
+
+        window.onload = changeImg;
+
+
+
+
+    </script>
+</body>
+
+</html>
