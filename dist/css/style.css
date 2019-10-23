@@ -21,6 +21,10 @@
     color: rgb(116, 13, 13);
 }
 
+.title {
+    padding-top: 70px;
+}
+
 .button {
     font-size: 30px;
     color: rgba(255, 255, 255, 0.767);
@@ -55,6 +59,20 @@ body {
     background-color: rgba(27, 31, 34, 0.85)
 }
 
+i {
+    color: white;
+}
+
+.icons {
+    position:relative;
+    margin: auto;
+    clear:center;
+    height:auto;
+    z-index: 0;
+    text-align: center;
+    justify-content: center;
+    padding-left: 60px;
+}
 
 
 .maindiv {
@@ -81,13 +99,29 @@ body {
 
 
 /* large screen */
-@media(max-width:300px){
+@media(max-width:500px){
     
+    .contains {
+        position:relative;
+        margin: auto;
+        clear:center;
+        height:auto;
+        z-index: 0;
+        text-align: center;
+        justify-content: center;
+        padding-left: 60px;
+        
+        }
 
 
-    p {
-        margin-top: 50px;
-        margin-bottom: 10px;
+        .button{
+
+            text-align: center;
+        }
+
+
+
+    .title {
+        padding-top: 500px;
     }
-
 }

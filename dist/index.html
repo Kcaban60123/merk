@@ -5,12 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
     <title>Jmerkbzrk</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <div class="wrapper">
+            <div class="contains">
+                    <audio src="" controls id="audioPlayer">
+                        Sorry, your browser doesn't support html5!
+                    </audio>
+                    <div class="dropdown">
+                        <button onclick="show_hide()" class="button">Tracklist</button>
+                        <ul style="display: none;" id="playlist">
+                            <li class="current-song"><a href="1. J-Merk - Biometricka (Prod.DjSadhu).mp3">Biometricka</a></li>
+                            <li><a href="2. J-Merk - Psilocybine (Prod.DjSadhu).mp3">Psilocybine</a></li>
+                            <li><a href="3. J-Merk - The Coalition (Prod.DjSadhu).mp3">The Coalition</a></li>
+                            <li><a href="4. J-Merk - Your B!tch Ft. Leaf & Bravo (Prod.DjSadhu).mp3">Your B!tch</a></li>
+                            <li><a href="5. J-Merk - Time Doesn't Exist (Prod.DjSadhu).mp3">Time Doesn't Exist</a></li>
+                            <li><a href="6. J-Merk - Focus (Prod. DjSadhu).mp3">Focus</a></li>
+                            <li><a href="7. J-Merk - Welcome To The Future (Prod. DjSadhu).mp3">Welcome To The Future</a></li>
+                        </ul>
+                        </li>
+                    </div>
+                </div>
         <div class="title">
             <h1>Jmerkbzrk.com</h1>
             <p>The Speaker Of Truths Has No Friends</p>
@@ -18,24 +37,21 @@
         <div class="maindiv">
             <img name="slide" width="700px" height="500px">
         </div>
-        <div class="contains">
-            <audio src="" controls id="audioPlayer">
-                Sorry, your browser doesn't support html5!
-            </audio>
-            <div class="dropdown">
-                <button onclick="show_hide()" class="button">Tracklist</button>
-                <ul style="display: none;" id="playlist">
-                    <li class="current-song"><a href="1. J-Merk - Biometricka (Prod.DjSadhu).mp3">Biometricka</a></li>
-                    <li><a href="2. J-Merk - Psilocybine (Prod.DjSadhu).mp3">Psilocybine</a></li>
-                    <li><a href="3. J-Merk - The Coalition (Prod.DjSadhu).mp3">The Coalition</a></li>
-                    <li><a href="4. J-Merk - Your B!tch Ft. Leaf & Bravo (Prod.DjSadhu).mp3">Your B!tch</a></li>
-                    <li><a href="5. J-Merk - Time Doesn't Exist (Prod.DjSadhu).mp3">Time Doesn't Exist</a></li>
-                    <li><a href="6. J-Merk - Focus (Prod. DjSadhu).mp3">Focus</a></li>
-                    <li><a href="7. J-Merk - Welcome To The Future (Prod. DjSadhu).mp3">Welcome To The Future</a></li>
-                </ul>
-                </li>
-            </div>
-        </div>
+        <div class="icons" id="linkList">
+                <a href="https://www.instagram.com/jmerkbzerk/">
+                  <i class="fab fa-instagram fa-2x"></i>
+                </a>
+                <a href="https://m.facebook.com/jmerkbzerk?tsid=0.6824553024655506&source=result">
+                  <i class="fab fa-facebook fa-2x"></i>
+                </a>
+                <a href="https://j-merk.bandcamp.com/">
+                    <i class="fab fa-bandcamp fa-2x"></i>
+                  </a>
+                <a href="https://www.linkedin.com/in/justus-fischer-27a68570/">
+                    <i class="fab fa-linkedin fa-2x"></i>
+                  </a>
+              </div>
+        
     </div>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script>
