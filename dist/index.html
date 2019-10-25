@@ -8,11 +8,29 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
     <title>Jmerkbzrk</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.6/mediaelementplayer.css"> 
+       <link rel="stylesheet" href="css/playlist.css">
+   
 </head>
 
 <body>
     <div class="wrapper">
             <div class="contains">
+
+                    <audio id="player2" preload="none" height="auto" width="auto"
+                    data-cast-title="Jazz Example"
+                    data-cast-description="This is a description for audio only"
+                    data-cast-poster="http://mediaelementjs.com/images/big_buck_bunny.jpg">
+                 <source src="1. J-Merk - Biometricka (Prod.DjSadhu).mp3" type="audio/mp3" title="Biometricka" data-playlist-thumbnail="img/cover-1.jpg" data-playlist-description="Biometricka - Destroy Your Idols - J-Merk">
+                 <source src="1. The Saga Begins.mp3" type="audio/mp3" title="The Saga Begins" data-playlist-thumbnail="img/bornDead.jpg" data-playlist-description="The Saga Begins - Born Dead - J-Merk">
+                 <source src="4. No Gimmicks.mp3" type="audio/mp3"  title="No Gimmicks" data-playlist-thumbnail="img/bornDead.jpg" data-playlist-description="No Gimmicks - Born Dead - J-Merk">
+                 <source src="5. J-Merk - Time Doesn't Exist (Prod.DjSadhu).mp3" type="audio/mp3" title="Time Doesn't Exist" data-playlist-thumbnail="img/cover-1.jpg" data-playlist-description="Time Doesn't Exist - Destroy Your Idols - J-Merk">                
+                 <source src="13. The Saga Continues.mp3" type="audio/mp3" title="The Saga Continues" data-playlist-thumbnail="img/bornDead.jpg" data-playlist-description="The Saga Continues - Born Dead - J-Merk">
+                 <source src="6. J-Merk - Focus (Prod. DjSadhu).mp3" type="audio/mp3" title="Focus" data-playlist-thumbnail="img/cover-1.jpg" data-playlist-description="Focus - Destroy Your Idols - J-Merk">
+             </audio>
+
+                <!--
                     <audio src="" controls id="audioPlayer">
                         Sorry, your browser doesn't support html5!
                     </audio>
@@ -29,7 +47,7 @@
                         </ul>
                         </li>
                     </div>
-                </div>
+                </div> -->
         <div class="title">
             <h1>Jmerkbzrk.com</h1>
             <p>The Speaker Of Truths Has No Friends</p>
@@ -54,7 +72,7 @@
         
     </div>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script>
+    <script>  /*
         audioPlayer();
         function audioPlayer() {
             var currentSong = 0;
@@ -79,7 +97,7 @@
                 $("#audioPlayer")[0].play();
             });
         }
-
+     */
         function show_hide() {
             var click = document.getElementById("playlist");
             if (click.style.display === "none") {
@@ -126,6 +144,17 @@
 
 
     </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.6/mediaelement-and-player.min.js"></script>
+<script src="css/playlist.js"></script>
+<script>
+	var mediaElements = document.querySelectorAll('video, audio');
+	for (var i = 0, total = mediaElements.length; i < total; i++) {
+		new MediaElementPlayer(mediaElements[i], {
+			features: ['prevtrack', 'playpause', 'nexttrack', 'current', 'progress', 'duration', 'volume', 'playlist', 'shuffle', 'loop', 'fullscreen'],
+		});
+	}
+</script>
+
 </body>
 
 </html>
