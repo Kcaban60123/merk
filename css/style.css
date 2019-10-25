@@ -3,9 +3,15 @@
 #playlist {
     list-style: none;
 }       
-
+/*
 .contains {
     position: fixed; top: 0; left: 0; z-index: 999; float: left;
+}   */
+
+.contains{
+    position: relative;
+    height: 200px;
+    max-width: 100%;
 }
 
 #playlist li a {
@@ -114,7 +120,7 @@ img {
     .maindiv {
         margin: 0;
 
-        max-width: 450px;
+        max-width: 400px;
         justify-content: center;
     }
 
@@ -125,7 +131,7 @@ img {
         z-index: 0;
         text-align: center;
         justify-content: center;
-        min-width: 420px;
+        min-width: 400px;
         }
 
      #audioPlayer{
