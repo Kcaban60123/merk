@@ -227,3 +227,7 @@
 .mejs-playlist-current-description {
     font-style: italic;
 }
+
+@media(max-width:400px){
+    
+}
