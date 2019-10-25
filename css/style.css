@@ -127,7 +127,7 @@ img {
     .contains {
         position: relative;
         margin: auto;
-        height:auto;
+        height: 40px;
         z-index: 0;
         text-align: center;
         justify-content: center;
@@ -177,7 +177,7 @@ transform: scale(1.05);
 
 
     .title {
-        padding-top: 500px;
+        padding-top: 200px;
         max-width: 100%;
         display: block;
     }
